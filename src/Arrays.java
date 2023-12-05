@@ -2,28 +2,27 @@ import javax.swing.JOptionPane;
 
 public class Arrays {
 
+	int[] vector;
 
-	 int[] vector;
+	public Arrays(int numero) {
 
-	 public Arrays(int numero) {
+		vector = new int[numero];
 
-	 vector=new int[numero];
+		for (int i = 0; i < numero; i++) {
 
-	 for(int i=0;i<numero;i++){
+			int valor = Integer.parseInt(JOptionPane.showInputDialog("Introduce valor"));
+			vector[i] = valor;
+		}
+	}
 
-	 int valor=Integer.parseInt(JOptionPane.showInputDialog("Introduce valor"));
-	 vector[i]=valor;
-	 }
-	 }
+	public void getDatosArrays() {
 
-	 public void getDatosArrays() {
+		System.out.println("Los valores de la matriz son: ");
 
-	 System.out.println("Los valores de la matriz son: ");
+		for (int j = 0; j < vector.length; j++) {
 
-	 for(int j=0;j<vector.length;j++){
+			System.out.print(vector[j] + "; ");
+		}
 
-	 System.out.print(vector[j] + "; ");
-	 }
-
-	 }
+	}
 }
